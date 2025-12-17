@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knusperstudio Links</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- GRUNDLEGENDE STYLES (Modern & Minimalistisch) --- */
+        :root {
+            --bg-color: #f8f9fa;       
+            --card-bg: #ffffff;        
+            --text-main: #2d3436;      
+            --text-sub: #636e72;       
+            --accent-hover: #f1f2f6;   
+            --shadow: 0 4px 15px rgba(0,0,0,0.05); 
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* --- CONTAINER --- */
+        .container {
+            width: 100%;
+            max-width: 480px;
+            background: var(--card-bg);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            text-align: center;
+            padding-bottom: 40px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        /* --- BANNER & LOGO --- */
+        .header-wrap {
+            position: relative;
+            margin-bottom: 110px; 
+        }
+
+        .banner {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            display: block;
+            background-color: #dfe6e9; 
+        }
+
+        .logo-wrap {
+            position: absolute;
+            bottom: -100px; 
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 4px;
+            background: var(--card-bg);
+            border-radius: 50%;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid #f1f1f1;
+            display: block;
+            background-color: #b2bec3; 
+        }
+
+        /* --- TEXT BEREICH --- */
+        .profile-info h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .profile-info p {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+
+        /* --- LINKS --- */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 0 24px;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: var(--card-bg);
+            color: var(--text-main);
+            text-decoration: none;
+            padding: 18px 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 50px; 
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .link-btn i {
+            position: absolute;
+            left: 24px;
+            font-size: 1.4rem;
+        }
+
+        .fa-etsy { color: #F16521; }
+        .fa-instagram { color: #E1306C; }
+        .fa-facebook { color: #1877F2; }
+
+        .link-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+            border-color: #d1d1d1;
+            background-color: var(--accent-hover);
+        }
+
+        /* --- FOOTER & KLAPP-MENÜS --- */
+        footer {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #b2bec3;
+            padding: 0 20px;
+        }
+
+        /* Das Klapp-Element (Accordion) */
+        details {
+            margin-top: 10px;
+            border-top: 1px solid #f1f1f1;
+            padding-top: 10px;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        summary {
+            cursor: pointer;
+            list-style: none; 
+            font-weight: 500;
+            color: var(--text-sub);
+            outline: none;
+            text-align: center; /* Überschrift zentriert */
+            padding: 5px;
+        }
+
+        summary:hover {
+            color: var(--text-main);
+        }
+
+        /* Custom Pfeil */
+        summary::-webkit-details-marker { display: none; }
+        summary::after {
+            content: '+'; 
+            display: inline-block;
+            margin-left: 5px;
+            font-weight: bold;
+        }
+        details[open] summary::after {
+            content: '-';
+        }
+
+        /* Inhalt der Boxen */
+        .legal-content {
+            margin-top: 10px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.75rem; /* Kleinttext wie gewünscht */
+            line-height: 1.5;
+            color: var(--text-sub);
+        }
+
+        .legal-content a {
+            color: var(--text-main);
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="header-wrap">
+            <img src="banner.jpg" alt="Knusperstudio Banner" class="banner" onerror="this.src='https://images.unsplash.com/photo-1557683316-973673baf926?w=800&q=80'">
+            
+            <div class="logo-wrap">
+                <img src="logo.jpg" alt="Knusperstudio Logo" class="logo" onerror="this.src='https://ui-avatars.com/api/?name=KS&background=random&size=200'">
+            </div>
+        </div>
+
+        <div class="profile-info">
+            <h1>Knusperstudio</h1>
+            <p>Hier findest du alle meine Shops & Profile</p>
+        </div>
+
+        <div class="links">
+            
+            <a href="https://knusperstudio.etsy.com" target="_blank" class="link-btn">
+                <i class="fab fa-etsy"></i>
+                Zum Etsy Shop
+            </a>
+
+            <a href="https://www.instagram.com/knusperstudio/" target="_blank" class="link-btn">
+                <i class="fab fa-instagram"></i>
+                Instagram
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61585223284586" target="_blank" class="link-btn">
+                <i class="fab fa-facebook"></i>
+                Facebook
+            </a>
+
+        </div>
+
+        <footer>
+            <div style="margin-bottom: 15px;">&copy; 2025 Knusperstudio</div>
+            
+            <details>
+                <summary>Impressum</summary>
+                <div class="legal-content">
+                    <p>
+                        Angaben gemäß § 5 TMG:<br>
+                        Das vollständige Impressum inklusive Kontaktinformationen und Anschrift finden Sie auf meiner Haupt-Verkaufsseite:<br><br>
+                        <a href="https://knusperstudio.etsy.com" target="_blank">Zum Impressum auf Etsy</a>
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Datenschutzerklärung</summary>
+                <div class="legal-content">
+                    <p><strong>Datenschutzerklärung & Haftungsausschluss</strong></p>
+                    <p style="margin-top: 8px;">
+                        Diese Webseite dient lediglich als Link-Sammlung (Landingpage) und wird technisch über <strong>GitHub Pages</strong> bereitgestellt. Beim Aufruf der Seite werden technisch bedingte Verbindungsdaten (z.B. Ihre IP-Adresse) durch den Hosting-Dienst verarbeitet.
+                    </p>
+                    <p style="margin-top: 8px;">
+                        Zur Darstellung von Symbolen und Bildern werden externe Inhalte geladen (z.B. von FontAwesome oder Unsplash). Durch das Laden dieser Inhalte wird Ihre IP-Adresse an die jeweiligen Drittanbieter übermittelt, damit die Darstellung im Browser erfolgen kann.
+                    </p>
+                    <p style="margin-top: 8px;">
+                        Für den Kauf von Produkten und die weitere Datenverarbeitung gelten die Datenschutzbestimmungen der verlinkten Plattformen (Etsy, Instagram, Facebook).
+                    </p>
+                    <p style="margin-top: 8px;">
+                        <a href="https://knusperstudio.etsy.com#policies" target="_blank">Vollständige Datenschutzerklärung auf Etsy ansehen</a>
+                    </p>
+                </div>
+            </details>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
